@@ -1,0 +1,37 @@
+{
+  "stops": [
+    {
+      "id": "jamal",
+      "name": "Jamal",
+      "name_local": "जमल",
+      "distance_meters": 180,
+      "walk_minutes": 3,
+      "alert_lead_minutes": 5,
+      "alerts_enabled": true,
+      "is_saved": false,
+      "arrivals": [
+        {
+          "bus_id": "07",
+          "bus_number": "07",
+          "destination": "Budanilkantha",
+          "route_name": "Lagankhel – Budanilkantha",
+          "eta_minutes": 4
+        },
+        {
+          "bus_id": "15",
+          "bus_number": "15",
+          "destination": "Lagankhel",
+          "route_name": "Lagankhel – Budanilkantha",
+          "eta_minutes": 6
+        },
+        {
+          "bus_id": "03",
+          "bus_number": "03",
+          "destination": "Budanilkantha",
+          "route_name": "Lagankhel – Budanilkantha",
+          "eta_minutes": 14
+        }
+      ]
+    }
+  ]
+}

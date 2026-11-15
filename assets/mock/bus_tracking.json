@@ -1,0 +1,164 @@
+{
+  "buses": [
+    {
+      "bus_id": "07",
+      "bus_number": "07",
+      "origin": "Lagankhel",
+      "destination": "Budanilkantha",
+      "status": "on_time",
+      "eta_minutes": 4,
+      "stops_away": 2,
+      "distance_meters": 1100,
+      "speed_kmh": 26,
+      "progress": 0.68,
+      "bus_position": { "x": 0.385, "y": 0.74 },
+      "passed_path": [
+        { "x": 0.173, "y": 1.0 },
+        { "x": 0.256, "y": 0.87 },
+        { "x": 0.385, "y": 0.74 }
+      ],
+      "upcoming_path": [
+        { "x": 0.385, "y": 0.74 },
+        { "x": 0.513, "y": 0.58 },
+        { "x": 0.59, "y": 0.432 },
+        { "x": 0.744, "y": 0.316 },
+        { "x": 0.872, "y": 0.142 }
+      ],
+      "stops": [
+        { "name": "Maitighar", "status": "passed", "eta_minutes": null, "is_user_stop": false, "position": { "x": 0.256, "y": 0.87 } },
+        { "name": "Ratnapark", "status": "upcoming", "eta_minutes": 1, "is_user_stop": false, "position": { "x": 0.513, "y": 0.58 } },
+        { "name": "Jamal", "status": "upcoming", "eta_minutes": 4, "is_user_stop": true, "position": { "x": 0.59, "y": 0.432 } },
+        { "name": "Lazimpat", "status": "upcoming", "eta_minutes": 7, "is_user_stop": false, "position": { "x": 0.744, "y": 0.316 } }
+      ]
+    },
+    {
+      "bus_id": "12",
+      "bus_number": "12",
+      "origin": "Budanilkantha",
+      "destination": "Lagankhel",
+      "status": "on_time",
+      "eta_minutes": 7,
+      "stops_away": 2,
+      "distance_meters": 1400,
+      "speed_kmh": 22,
+      "progress": 0.45,
+      "bus_position": { "x": 0.66, "y": 0.38 },
+      "passed_path": [
+        { "x": 0.872, "y": 0.142 },
+        { "x": 0.744, "y": 0.316 },
+        { "x": 0.66, "y": 0.38 }
+      ],
+      "upcoming_path": [
+        { "x": 0.66, "y": 0.38 },
+        { "x": 0.59, "y": 0.432 },
+        { "x": 0.513, "y": 0.58 },
+        { "x": 0.385, "y": 0.74 },
+        { "x": 0.256, "y": 0.87 },
+        { "x": 0.173, "y": 1.0 }
+      ],
+      "stops": [
+        { "name": "Maharajgunj", "status": "passed", "eta_minutes": null, "is_user_stop": false, "position": { "x": 0.744, "y": 0.316 } },
+        { "name": "Lazimpat", "status": "upcoming", "eta_minutes": 2, "is_user_stop": false, "position": { "x": 0.59, "y": 0.432 } },
+        { "name": "Jamal", "status": "upcoming", "eta_minutes": 7, "is_user_stop": true, "position": { "x": 0.385, "y": 0.74 } },
+        { "name": "Ratnapark", "status": "upcoming", "eta_minutes": 9, "is_user_stop": false, "position": { "x": 0.256, "y": 0.87 } }
+      ]
+    },
+    {
+      "bus_id": "21",
+      "bus_number": "21",
+      "origin": "Airport",
+      "destination": "Thankot",
+      "status": "delayed",
+      "eta_minutes": 11,
+      "stops_away": 3,
+      "distance_meters": 2100,
+      "speed_kmh": 18,
+      "progress": 0.3,
+      "bus_position": { "x": 0.7, "y": 0.5 },
+      "passed_path": [
+        { "x": 1.0, "y": 0.5 },
+        { "x": 0.82, "y": 0.47 },
+        { "x": 0.7, "y": 0.5 }
+      ],
+      "upcoming_path": [
+        { "x": 0.7, "y": 0.5 },
+        { "x": 0.55, "y": 0.56 },
+        { "x": 0.4, "y": 0.52 },
+        { "x": 0.25, "y": 0.6 },
+        { "x": 0.0, "y": 0.66 }
+      ],
+      "stops": [
+        { "name": "Tinkune", "status": "passed", "eta_minutes": null, "is_user_stop": false, "position": { "x": 0.82, "y": 0.47 } },
+        { "name": "Baneshwor", "status": "upcoming", "eta_minutes": 3, "is_user_stop": false, "position": { "x": 0.55, "y": 0.56 } },
+        { "name": "Maitighar", "status": "upcoming", "eta_minutes": 7, "is_user_stop": false, "position": { "x": 0.4, "y": 0.52 } },
+        { "name": "Jamal", "status": "upcoming", "eta_minutes": 11, "is_user_stop": true, "position": { "x": 0.25, "y": 0.6 } },
+        { "name": "Kalanki", "status": "upcoming", "eta_minutes": 20, "is_user_stop": false, "position": { "x": 0.06, "y": 0.646 } }
+      ]
+    },
+    {
+      "bus_id": "15",
+      "bus_number": "15",
+      "origin": "Budanilkantha",
+      "destination": "Lagankhel",
+      "status": "on_time",
+      "eta_minutes": 6,
+      "stops_away": 2,
+      "distance_meters": 1300,
+      "speed_kmh": 24,
+      "progress": 0.55,
+      "bus_position": { "x": 0.66, "y": 0.38 },
+      "passed_path": [
+        { "x": 0.872, "y": 0.142 },
+        { "x": 0.744, "y": 0.316 },
+        { "x": 0.66, "y": 0.38 }
+      ],
+      "upcoming_path": [
+        { "x": 0.66, "y": 0.38 },
+        { "x": 0.59, "y": 0.432 },
+        { "x": 0.513, "y": 0.58 },
+        { "x": 0.385, "y": 0.74 },
+        { "x": 0.256, "y": 0.87 },
+        { "x": 0.173, "y": 1.0 }
+      ],
+      "stops": [
+        { "name": "Lazimpat", "status": "passed", "eta_minutes": null, "is_user_stop": false, "position": { "x": 0.744, "y": 0.316 } },
+        { "name": "Lainchaur", "status": "upcoming", "eta_minutes": 3, "is_user_stop": false, "position": { "x": 0.59, "y": 0.432 } },
+        { "name": "Jamal", "status": "upcoming", "eta_minutes": 6, "is_user_stop": true, "position": { "x": 0.513, "y": 0.58 } },
+        { "name": "Ratnapark", "status": "upcoming", "eta_minutes": 8, "is_user_stop": false, "position": { "x": 0.256, "y": 0.87 } }
+      ]
+    },
+    {
+      "bus_id": "03",
+      "bus_number": "03",
+      "origin": "Lagankhel",
+      "destination": "Budanilkantha",
+      "status": "on_time",
+      "eta_minutes": 14,
+      "stops_away": 4,
+      "distance_meters": 3600,
+      "speed_kmh": 21,
+      "progress": 0.2,
+      "bus_position": { "x": 0.256, "y": 0.87 },
+      "passed_path": [
+        { "x": 0.08, "y": 1.0 },
+        { "x": 0.17, "y": 0.93 },
+        { "x": 0.256, "y": 0.87 }
+      ],
+      "upcoming_path": [
+        { "x": 0.256, "y": 0.87 },
+        { "x": 0.385, "y": 0.74 },
+        { "x": 0.513, "y": 0.58 },
+        { "x": 0.59, "y": 0.432 },
+        { "x": 0.744, "y": 0.316 },
+        { "x": 0.872, "y": 0.142 }
+      ],
+      "stops": [
+        { "name": "Pulchowk", "status": "passed", "eta_minutes": null, "is_user_stop": false, "position": { "x": 0.17, "y": 0.93 } },
+        { "name": "Kupondole", "status": "upcoming", "eta_minutes": 3, "is_user_stop": false, "position": { "x": 0.385, "y": 0.74 } },
+        { "name": "Maitighar", "status": "upcoming", "eta_minutes": 8, "is_user_stop": false, "position": { "x": 0.513, "y": 0.58 } },
+        { "name": "Ratnapark", "status": "upcoming", "eta_minutes": 11, "is_user_stop": false, "position": { "x": 0.59, "y": 0.432 } },
+        { "name": "Jamal", "status": "upcoming", "eta_minutes": 14, "is_user_stop": true, "position": { "x": 0.744, "y": 0.316 } }
+      ]
+    }
+  ]
+}

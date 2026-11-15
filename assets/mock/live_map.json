@@ -1,0 +1,72 @@
+{
+  "updated_seconds_ago": 5,
+  "user_location": { "x": 0.525, "y": 0.853 },
+  "routes": [
+    {
+      "id": "lagankhel-budanilkantha",
+      "name": "Lagankhel – Budanilkantha",
+      "path": [
+        { "x": 0.08, "y": 1.0 },
+        { "x": 0.28, "y": 0.905 },
+        { "x": 0.55, "y": 0.695 },
+        { "x": 0.615, "y": 0.524 },
+        { "x": 0.77, "y": 0.453 },
+        { "x": 0.845, "y": 0.314 },
+        { "x": 0.98, "y": 0.253 }
+      ],
+      "stops": [
+        { "x": 0.28, "y": 0.905 },
+        { "x": 0.55, "y": 0.695 },
+        { "x": 0.615, "y": 0.524 },
+        { "x": 0.845, "y": 0.314 }
+      ]
+    },
+    {
+      "id": "airport",
+      "name": "Airport",
+      "path": [
+        { "x": 0.0, "y": 0.632 },
+        { "x": 0.23, "y": 0.61 },
+        { "x": 0.45, "y": 0.63 },
+        { "x": 0.665, "y": 0.6 },
+        { "x": 1.0, "y": 0.62 }
+      ],
+      "stops": [
+        { "x": 0.45, "y": 0.63 },
+        { "x": 0.665, "y": 0.6 }
+      ]
+    }
+  ],
+  "buses": [
+    {
+      "id": "07",
+      "number": "07",
+      "route_id": "lagankhel-budanilkantha",
+      "destination": "Budanilkantha",
+      "description": "via Jamal",
+      "eta_minutes": 3,
+      "distance_meters": 450,
+      "position": { "x": 0.385, "y": 0.823 }
+    },
+    {
+      "id": "12",
+      "number": "12",
+      "route_id": "lagankhel-budanilkantha",
+      "destination": "Lagankhel",
+      "description": "via Lazimpat",
+      "eta_minutes": 7,
+      "distance_meters": 1400,
+      "position": { "x": 0.77, "y": 0.453 }
+    },
+    {
+      "id": "21",
+      "number": "21",
+      "route_id": "airport",
+      "destination": "Thankot",
+      "description": "Airport route",
+      "eta_minutes": 11,
+      "distance_meters": 2100,
+      "position": { "x": 0.23, "y": 0.61 }
+    }
+  ]
+}
