@@ -1,9 +1,21 @@
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     id("kotlin-android")
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
 }
+
+// Google Maps key: add `MAPS_API_KEY=...` to android/local.properties
+// (git-ignored). Without one the map still opens, but shows no tiles.
+val localProperties = Properties().apply {
+    val file = rootProject.file("local.properties")
+    if (file.exists()) file.inputStream().use { load(it) }
+}
+val mapsApiKey: String =
+    localProperties.getProperty("MAPS_API_KEY")?.takeIf { it.isNotBlank() }
+        ?: "MISSING_MAPS_API_KEY"
 
 android {
     namespace = "com.gotrack.gotrack"
@@ -28,6 +40,7 @@ android {
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
+        manifestPlaceholders["mapsApiKey"] = mapsApiKey
     }
 
     buildTypes {

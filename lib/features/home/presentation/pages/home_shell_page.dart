@@ -1,21 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../core/theme/app_palette.dart';
+import '../../../auth/domain/entities/user.dart';
+import '../../../auth/presentation/bloc/auth_bloc.dart';
 
-/// Signed-in shell: hosts the four tabs and the bottom navigation bar.
+/// Signed-in shell: hosts the tabs and the bottom navigation bar. Which
+/// tabs are shown depends on the signed-in user's type.
 /// Each tab keeps its own state while the user switches between them.
 class HomeShellPage extends StatelessWidget {
   const HomeShellPage({super.key, required this.navigationShell});
 
   final StatefulNavigationShell navigationShell;
 
-  // Order must match the branches declared in `AppRouter`.
-  static const List<(String, IconData)> _tabs = [
-    ('Live map', Icons.map_outlined),
-    ('Routes', Icons.route_outlined),
-    ('Stops', Icons.location_on_outlined),
-    ('Profile', Icons.person_outline),
+  // The first value is the index of the branch declared in `AppRouter`.
+  static const List<(int, String, IconData)> _generalTabs = [
+    (0, 'Live map', Icons.map_outlined),
+    (1, 'Routes', Icons.route_outlined),
+    (2, 'Stops', Icons.location_on_outlined),
+    (3, 'Profile', Icons.person_outline),
+  ];
+  static const List<(int, String, IconData)> _ownerTabs = [
+    (4, 'My location', Icons.my_location),
+    (3, 'Profile', Icons.person_outline),
   ];
 
   void _onTap(int index) {
@@ -29,6 +37,11 @@ class HomeShellPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final palette = context.palette;
+    final isOwner = context.select<AuthBloc, bool>((bloc) {
+      final state = bloc.state;
+      return state is Authenticated && state.user.userType == UserType.owner;
+    });
+    final tabs = isOwner ? _ownerTabs : _generalTabs;
 
     return Scaffold(
       body: navigationShell,
@@ -43,13 +56,13 @@ class HomeShellPage extends StatelessWidget {
             height: 64,
             child: Row(
               children: [
-                for (var i = 0; i < _tabs.length; i++)
+                for (final (branch, label, icon) in tabs)
                   Expanded(
                     child: _TabItem(
-                      label: _tabs[i].$1,
-                      icon: _tabs[i].$2,
-                      selected: i == navigationShell.currentIndex,
-                      onTap: () => _onTap(i),
+                      label: label,
+                      icon: icon,
+                      selected: branch == navigationShell.currentIndex,
+                      onTap: () => _onTap(branch),
                     ),
                   ),
               ],

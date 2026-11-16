@@ -11,6 +11,9 @@ class RouteNames {
   static const String stops = 'stops';
   static const String profile = 'profile';
 
+  /// Owner-only tab.
+  static const String myLocation = 'myLocation';
+
   /// Needs a `busId` path parameter.
   static const String busTracking = 'busTracking';
 }
@@ -27,8 +30,17 @@ class RoutePaths {
   static const String stops = '/stops';
   static const String profile = '/profile';
 
+  /// Owner-only tab.
+  static const String myLocation = '/my-location';
+
   static const String busTracking = '/buses/:busId';
 
   /// Where a signed-in user lands.
   static const String home = liveMap;
+
+  /// Where a signed-in owner lands.
+  static const String ownerHome = myLocation;
+
+  /// Tabs an owner does not have.
+  static const Set<String> nonOwnerTabs = {liveMap, routes, stops};
 }

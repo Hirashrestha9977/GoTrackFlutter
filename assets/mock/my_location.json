@@ -1,0 +1,15 @@
+{
+  "updated_seconds_ago": 12,
+  "locations": [
+    { "latitude": 27.6672, "longitude": 85.3233, "place": "Lagankhel", "recorded_at": "2026-11-16T09:02:00", "speed_kmh": 0 },
+    { "latitude": 27.6708, "longitude": 85.3203, "place": "Kumaripati", "recorded_at": "2026-11-16T09:06:00", "speed_kmh": 18 },
+    { "latitude": 27.6731, "longitude": 85.3139, "place": "Jawalakhel", "recorded_at": "2026-11-16T09:10:00", "speed_kmh": 22 },
+    { "latitude": 27.6783, "longitude": 85.3166, "place": "Pulchowk", "recorded_at": "2026-11-16T09:14:00", "speed_kmh": 26 },
+    { "latitude": 27.6866, "longitude": 85.3157, "place": "Kupondole", "recorded_at": "2026-11-16T09:19:00", "speed_kmh": 14 },
+    { "latitude": 27.6908, "longitude": 85.3189, "place": "Thapathali", "recorded_at": "2026-11-16T09:24:00", "speed_kmh": 9 },
+    { "latitude": 27.6943, "longitude": 85.3131, "place": "Tripureshwor", "recorded_at": "2026-11-16T09:29:00", "speed_kmh": 21 },
+    { "latitude": 27.6999, "longitude": 85.3128, "place": "Sundhara", "recorded_at": "2026-11-16T09:33:00", "speed_kmh": 17 },
+    { "latitude": 27.7058, "longitude": 85.3149, "place": "Ratna Park", "recorded_at": "2026-11-16T09:38:00", "speed_kmh": 12 },
+    { "latitude": 27.7091, "longitude": 85.3152, "place": "Jamal", "recorded_at": "2026-11-16T09:42:00", "speed_kmh": 0 }
+  ]
+}

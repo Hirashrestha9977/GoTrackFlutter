@@ -6,4 +6,5 @@ class MockAssets {
   static const String liveMap = 'assets/mock/live_map.json';
   static const String busTracking = 'assets/mock/bus_tracking.json';
   static const String stopArrivals = 'assets/mock/stop_arrivals.json';
+  static const String myLocation = 'assets/mock/my_location.json';
 }

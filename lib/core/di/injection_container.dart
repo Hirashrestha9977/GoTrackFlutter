@@ -21,6 +21,11 @@ import '../../features/live_map/data/repositories/live_map_repository_impl.dart'
 import '../../features/live_map/domain/repositories/live_map_repository.dart';
 import '../../features/live_map/domain/usecases/get_live_map.dart';
 import '../../features/live_map/presentation/bloc/live_map_bloc.dart';
+import '../../features/my_location/data/datasources/my_location_data_source.dart';
+import '../../features/my_location/data/repositories/my_location_repository_impl.dart';
+import '../../features/my_location/domain/repositories/my_location_repository.dart';
+import '../../features/my_location/domain/usecases/get_location_trail.dart';
+import '../../features/my_location/presentation/bloc/my_location_bloc.dart';
 import '../../features/stops/data/datasources/stops_data_source.dart';
 import '../../features/stops/data/repositories/stops_repository_impl.dart';
 import '../../features/stops/domain/repositories/stops_repository.dart';
@@ -56,6 +61,7 @@ Future<void> initDependencies() async {
   _initLiveMap();
   _initBusTracking();
   _initStops();
+  _initMyLocation();
 
   // Router (needs AuthBloc for redirects)
   sl.registerLazySingleton<AppRouter>(() => AppRouter(sl<AuthBloc>()));
@@ -111,6 +117,17 @@ void _initBusTracking() {
   );
   sl.registerLazySingleton(() => GetBusTracking(sl()));
   sl.registerFactory(() => BusTrackingBloc(getBusTracking: sl()));
+}
+
+void _initMyLocation() {
+  sl.registerLazySingleton<MyLocationDataSource>(
+    () => MyLocationMockDataSource(sl()),
+  );
+  sl.registerLazySingleton<MyLocationRepository>(
+    () => MyLocationRepositoryImpl(sl()),
+  );
+  sl.registerLazySingleton(() => GetLocationTrail(sl()));
+  sl.registerFactory(() => MyLocationBloc(getLocationTrail: sl()));
 }
 
 void _initStops() {
